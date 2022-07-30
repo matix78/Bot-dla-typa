@@ -7,6 +7,9 @@ const functions = fs.readdirSync('./functions').filter(file => file.endsWith('.j
 const eventFiles = fs.readdirSync('./Events').filter(file => file.endsWith('.js'));
 const slashCommands = fs.readdirSync('./slashcommands');
 
+require('dotenv').config()
+const token = process.env.TOKEN
+
 const client = new Discord.Client({
 partials: ["CHANNEL", "MESSAGE", "REACTION"],
 intents: (32767)
@@ -26,7 +29,7 @@ const cooldowns = new Discord.Collection();
 // }
 
 ( () => {
-    client.login(config.token);
+    client.login(token);
     for(file of functions){
         require(`./functions/${file}`)(client);
     }
