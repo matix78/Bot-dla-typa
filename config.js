@@ -1,4 +1,7 @@
 module.exports = {
     prefix: '!',
-    token: 'OTk0MjMxMDg0MTc2OTAwMTE2.GI85pq.9S7DPRWrqNAc2oKMwpHwJ1Y1lyj2FAxz5ktjAU',
+    //token: process.env.TOKEN,
+    clientId: "869587877477101590"
+    //PAW ID 869587877477101590
+    //twoje ID 994231084176900116
 }

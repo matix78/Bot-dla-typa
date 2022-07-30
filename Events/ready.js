@@ -1,7 +1,8 @@
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
-const { token } = require('../config');
-const clientId = '994231084176900116';
+const token = process.env.TOKEN
+const config = require("../config")
+const clientId = config.clientId
 module.exports = {
     name: 'ready',
     once: true,
