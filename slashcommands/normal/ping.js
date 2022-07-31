@@ -3,6 +3,7 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 const Discord = require('discord.js');
 
 module.exports = {
+    name: "ping",
 
     data: new SlashCommandBuilder()
         .setName('ping')
@@ -18,7 +19,7 @@ module.exports = {
 
 
     execute: async (message, args) => {
-
+message.reply("pong")
     }
 }
 
